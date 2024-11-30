@@ -1,6 +1,8 @@
 <template>
-<img src="./static/home.png" alt="logo">
-    <h1>Vue - TypeScript - Webpack</h1>
+    <div>
+        <img src="./assets/images/home.png" alt="logo">
+        <h1>Vue - TypeScript - Webpack</h1>
+    </div>
 </template>
 
 <script lang="ts">
@@ -12,11 +14,12 @@ export default defineComponent({
 </script>
 
 <style scoped>
-img{
+img {
     display: block;
     margin: 100px auto 10px;
 }
-h1{
+
+h1 {
     width: 100%;
     text-align: center;
     margin-top: 10px;
