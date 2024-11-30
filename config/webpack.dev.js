@@ -1,6 +1,7 @@
 const path = require('path/posix');
 const { merge } = require('webpack-merge');
 const common  =require('./webpack.common.js');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = merge(common, {
     // DEVELOPMENT MODE
@@ -20,8 +21,18 @@ module.exports = merge(common, {
             // CSS FILES
             {
                 test: /\.css$/,
-                use: ['vue-style-loader', 'css-loader'],
+                use: [
+                  MiniCssExtractPlugin.loader,
+                  'css-loader',
+                  'postcss-loader',
+                ],
             },
         ],
     },
+    plugins: [
+        new MiniCssExtractPlugin({
+          filename: '[name].css',
+          chunkFilename: '[id].css',
+        }),
+      ],
 });

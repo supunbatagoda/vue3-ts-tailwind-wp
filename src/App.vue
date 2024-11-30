@@ -1,7 +1,10 @@
 <template>
-    <div>
-        <img src="./assets/images/home.png" alt="logo">
-        <h1>Vue - TypeScript - Webpack</h1>
+    <div class="container">
+        <div class="text-center justify-center">
+            <img src="./assets/images/home.png" alt="logo">
+            <h2 class="bg-green-400">Welcome to Vue.js with TypeScript and Webpack!</h2>
+            <p>This is a simple application that demonstrates the integration of Vue.js, TypeScript, and Webpack.</p>
+        </div>
     </div>
 </template>
 
@@ -13,15 +16,4 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
-img {
-    display: block;
-    margin: 100px auto 10px;
-}
-
-h1 {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-}
-</style>
+<style scoped></style>

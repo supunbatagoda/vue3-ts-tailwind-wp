@@ -16,7 +16,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Minimal base config',
-            favicon: path.resolve(__src, 'static', 'favicon.ico'),
+            favicon: path.resolve(__src, 'assets/images', 'favicon.ico'),
             template: path.resolve(__src, 'templates', 'index.html'),
         }),
         new VueLoaderPlugin(),
